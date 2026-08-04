@@ -1,0 +1,33 @@
+{
+  "name": "agentic-workflows",
+  "version": "0.1.0",
+  "description": "Planning and ticket-refinement workflows for agent-ready GitHub work.",
+  "author": {
+    "name": "Connor",
+    "url": "https://github.com/connorwally"
+  },
+  "homepage": "https://github.com/connorwally/Agentic-Development",
+  "repository": "https://github.com/connorwally/Agentic-Development",
+  "keywords": [
+    "github",
+    "planning",
+    "issues",
+    "agentic-workflows"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Agentic Workflows",
+    "shortDescription": "Plan and refine agent-ready GitHub work.",
+    "longDescription": "Turn ambiguous initiatives into execution-ready GitHub issues and clarify individual tickets before implementation.",
+    "developerName": "Connor",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Turn this initiative into agent-ready GitHub issues.",
+      "Grill me on this issue before implementation starts."
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "connor-personal",
+  "interface": {
+    "displayName": "Connor Personal"
+  },
+  "plugins": [
+    {
+      "name": "agentic-workflows",
+      "source": {
+        "source": "local",
+        "path": "./plugins/agentic-workflows"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+interface:
+  display_name: "Grill Me"
+  short_description: "Expose ticket ambiguity before implementation"
+  default_prompt: "Use $grill-me to question me about the ambiguities in this GitHub issue before implementation starts."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "github"
+      description: "GitHub access for reading issues, comments, linked work, and repository context"
+      transport: "streamable_http"
+      url: "https://api.githubcopilot.com/mcp/"
+
+policy:
+  allow_implicit_invocation: false

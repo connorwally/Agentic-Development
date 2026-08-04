@@ -1,0 +1,15 @@
+interface:
+  display_name: "Pathfinder"
+  short_description: "Turn ambiguous initiatives into actionable issues"
+  default_prompt: "Use $pathfinder to map this initiative into agent-ready GitHub issues and add them to my selected project."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "github"
+      description: "GitHub access for repository discovery, issue creation, and Project management"
+      transport: "streamable_http"
+      url: "https://api.githubcopilot.com/mcp/"
+
+policy:
+  allow_implicit_invocation: true
