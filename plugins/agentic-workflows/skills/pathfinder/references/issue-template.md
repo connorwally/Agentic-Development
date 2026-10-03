@@ -32,12 +32,13 @@ State the single observable outcome this issue must deliver.
 
 - [ ] Write observable, independently verifiable completion conditions.
 - [ ] Cover important success, failure, and edge-case behavior.
-- [ ] Include required tests, documentation, migration, or telemetry outcomes.
+- [ ] Include tests, documentation, migration, or telemetry outcomes only where needed for this ticket; observable criteria do not automatically require automated tests.
 
 ## Validation
 
 - List exact existing test, lint, build, or manual verification commands when known.
-- State what evidence demonstrates success.
+- State the smallest practical evidence that demonstrates success, following applicable `AGENTS.md` validation policies. A concise manual checklist is valid.
+- Do not expand a ticket into testing infrastructure or exhaustive coverage without a concrete risk that warrants it, and explicit permission from the user.
 
 ## Dependencies
 

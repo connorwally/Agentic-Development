@@ -28,6 +28,14 @@ Do not ask the user questions that repository or GitHub evidence can answer. If 
 
 Do not implement the issue, edit files, create a branch, or mutate GitHub while grilling.
 
+## Keep validation proportionate
+
+Follow applicable `AGENTS.md` validation policies when drafting issues, asking questions, and defining readiness.
+
+Choose the smallest validation approach that provides meaningful confidence in the requested outcome. Manual verification is valid; testable does not mean automated.
+
+Do not expand a ticket into testing infrastructure or exhaustive coverage without a concrete risk that warrants it, and explicit permission from the user. Do not interrogate every testing layer or make unavailable automation a blocker when a realistic alternative exists. Record the limitation and move on.
+
 ## Build the ambiguity inventory
 
 Extract what the issue states explicitly:

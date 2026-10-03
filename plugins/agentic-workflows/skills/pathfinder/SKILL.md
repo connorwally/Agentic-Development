@@ -27,6 +27,14 @@ Perform read-only discovery before proposing issues:
 
 Restate the target outcome in observable terms. Identify the gap between current and desired behavior, constraints, workstreams, dependencies, integration points, migration or rollout needs, and validation strategy.
 
+## Keep validation proportionate
+
+Follow applicable `AGENTS.md` validation policies when drafting issues, asking questions, and defining readiness.
+
+Choose the smallest validation approach that provides meaningful confidence in the requested outcome. Manual verification is valid; testable does not mean automated.
+
+Do not expand a ticket into testing infrastructure or exhaustive coverage without a concrete risk that warrants it, and explicit permission from the user. Do not interrogate every testing layer or make unavailable automation a blocker when a realistic alternative exists. Record the limitation and move on.
+
 ## Build the execution path
 
 Create the smallest coherent set of issues that fully spans the gap:
