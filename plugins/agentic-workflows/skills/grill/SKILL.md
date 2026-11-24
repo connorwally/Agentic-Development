@@ -66,10 +66,11 @@ Identify missing or conflicting decisions that could materially change implement
 ## Conduct the interview
 
 - Be candid, persistent, and precise without being hostile.
-- Ask one to three high-leverage questions per round. Start with blockers and branch based on the answers instead of dumping a questionnaire.
-- Explain briefly why each answer matters.
+- Ask one high-leverage decision question per round so a bare “yes” has one clear referent. Start with blockers and branch based on the answer.
+- Explain briefly why the decision matters.
 - Challenge vague language such as “support,” “handle,” “fast,” “user-friendly,” “properly,” and “as needed” by asking for observable behavior or boundaries.
-- Offer concrete options when the decision space is genuinely known, and state a recommendation when useful. Do not hide assumptions inside the options.
+- Present concrete options when the decision space is known. For each option, explain when you would choose it and its main trade-off. Then label one option **Recommendation** and explain why it fits this issue best. State the assumptions behind it; if key evidence is missing, recommend how to resolve the unknown rather than guessing.
+- End with “Accept the recommendation? Reply **yes** to accept, or name another option.” Treat a bare “yes” as accepting that round’s recommendation, record it in the decision log, and move on without reconfirming. If the reply qualifies or contradicts the recommendation, honor the qualification or clarify before recording it. Acceptance settles the interview decision; it does not authorize file edits or GitHub writes beyond the existing rules.
 - Distinguish product decisions from implementation discretion. Do not force the user to choose details an implementing agent can decide safely.
 - When the user says “you decide,” recommend a choice, explain the tradeoff, and record it as an approved assumption.
 - Maintain a concise decision log after each round so earlier answers are not asked again.
