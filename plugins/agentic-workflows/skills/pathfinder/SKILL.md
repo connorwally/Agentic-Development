@@ -1,6 +1,6 @@
 ---
 name: pathfinder
-description: Turn a large, ambiguous initiative into an evidence-based execution path and create agent-ready GitHub issues in a user-selected GitHub Project. Use when the user wants to investigate a repository, decompose an outcome, build a backlog or roadmap, plan a substantial change, or create a dependency-aware series of GitHub tickets from current state to desired state.
+description: Turn a large, ambiguous initiative into an execution path grounded in repository docs, architecture decisions, and code, then create agent-ready GitHub issues in a user-selected GitHub Project. Use when the user wants to investigate a repository, decompose an outcome, build a backlog or roadmap, plan a substantial change, or create a dependency-aware series of GitHub tickets from current state to desired state.
 ---
 
 # Pathfinder
@@ -27,6 +27,13 @@ Perform read-only discovery before proposing issues:
 
 Restate the target outcome in observable terms. Identify the gap between current and desired behavior, constraints, workstreams, dependencies, integration points, migration or rollout needs, and validation strategy.
 
+## Check docs and architecture decisions
+
+- Check repository instructions and doc indexes for declared architecture decision record (ADR) locations. Search for case-insensitive `adr` and `adrs` directory names across the repository (e.g. `Docs/ADR`, `docs/adrs`, or a component's `docs/adr`), skipping generated and dependency directories. Inventory records recursively in **every** ADR directory, including records stored in their own subdirectories. Ignore placeholders such as `.gitkeep`.
+- Use indexes and titles to triage, then read potentially relevant records and follow related and superseding links. Note each decision's scope and status. Treat applicable accepted ADRs as constraints; use proposed, rejected, or superseded records as context, not policy. If status or scope is ambiguous, label it as such. If no ADRs are found or accessible, note the limitation and continue with other evidence.
+- Read relevant design docs and any glossary or context docs (e.g. `GLOSSARY.md` or `CONTEXT.md`). Use established domain terms in the roadmap and issue drafts; flag conflicting definitions instead of silently introducing new terms.
+- Compare the desired outcome with the docs and the actual code. Cite repository-relative paths for agreements, constraints, and conflicts that affect the plan. Distinguish implementation drift, stale docs, and a deliberate change of direction; if the evidence can't distinguish them, ask or mark the decision as unresolved. Never plan around an accepted ADR as though it were already superseded.
+
 ## Keep validation proportionate
 
 Follow applicable `AGENTS.md` validation policies when drafting issues, asking questions, and defining readiness.
@@ -44,7 +51,8 @@ Create the smallest coherent set of issues that fully spans the gap:
 - Preserve meaningful vertical slices when they reduce integration risk; do not create microscopic file-by-file chores.
 - Put prerequisites before dependants and organize independent work into parallel waves.
 - Create a discovery spike only when an important unknown cannot be resolved from available evidence. Give the spike a concrete artifact or decision as its deliverable.
-- Include implementation, tests, documentation, compatibility, observability, migration, and cleanup work only where the initiative actually requires them.
+- If work would depart from an applicable ADR, surface the trade-off for review. When the choice can't be settled during planning, make the decision an explicit prerequisite and mark affected implementation tickets as dependent on it. A decision ticket should name the options, the ADR it may supersede, and the decision artifact it must deliver.
+- Include implementation, tests, documentation, compatibility, observability, migration, and cleanup work only where the initiative actually requires them. Keep doc updates with the work that makes them true unless they have an independent outcome or must land earlier. Propose a new or superseding ADR for hard-to-reverse decisions that reflect a real trade-off and would otherwise surprise a future maintainer; follow repository conventions and preserve the historical record.
 - Avoid estimates, assignees, priority, dates, labels, milestones, or Project field values unless the user supplies them or explicitly asks for recommendations.
 
 Draft every issue using [references/issue-template.md](references/issue-template.md). Use temporary IDs such as `PF-01` while reviewing the plan. Express dependencies by temporary ID until GitHub issue numbers exist.
@@ -58,9 +66,10 @@ Present the proposed backlog before creating anything. Include:
 - A table of temporary ID, issue title, type, dependencies, and execution wave.
 - The complete proposed issue bodies, or offer them in manageable batches when the backlog is large.
 - Existing issues that may replace or overlap proposed work.
+- Applicable docs and ADR constraints, unresolved decision conflicts, and any proposed documentation work.
 - Material assumptions, unresolved risks, and any proposed metadata.
 
-Ask for explicit approval to create the reviewed issues and add them to the resolved Project. Treat edits as approval only after presenting the revised plan. Approval to create tickets does not authorize source-code changes, new labels, a new Project, assignments, or other repository mutations.
+Ask for explicit approval to create the reviewed issues and add them to the resolved Project. Treat edits as approval only after presenting the revised plan. Approval to create tickets does not authorize editing source code, docs, or ADRs, or making other repository changes such as creating labels or Projects or assigning issues.
 
 ## Create and attach the issues
 

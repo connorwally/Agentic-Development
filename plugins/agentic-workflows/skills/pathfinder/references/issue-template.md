@@ -24,7 +24,7 @@ State the single observable outcome this issue must deliver.
 
 ## Implementation notes
 
-- Record established constraints, repository conventions, and useful starting points.
+- Record established constraints, repository conventions, and useful starting points. Cite relevant docs and applicable ADRs by repository-relative path and state what constraint or decision each one establishes.
 - Describe interfaces or invariants that must remain stable.
 - Provide guidance without prescribing unsupported implementation details.
 
@@ -42,7 +42,7 @@ State the single observable outcome this issue must deliver.
 
 ## Dependencies
 
-- `None`, or list prerequisite issue links with a short explanation.
+- `None`, or list prerequisite issue links with a short explanation. Call out architecture decisions that must be made before implementation can begin.
 
 ## Risks and open questions
 
@@ -59,6 +59,7 @@ Before proposing an issue, verify that:
 - Acceptance criteria describe behavior rather than vague activity such as “update code.”
 - Validation is realistic for this repository and does not invent commands.
 - Dependencies are necessary, directed, and free of cycles.
+- The proposed work respects applicable ADRs or names the decision needed to supersede them. Any docs or ADR deliverables specify what must be recorded, not just “update docs.”
 - Unknowns are either resolved, bounded within the issue, or isolated in a concrete discovery spike.
 - The issue does not duplicate an existing open or recently completed ticket.
 - No private reasoning, credentials, transient local paths, or irrelevant investigation logs appear in the body.

@@ -4,7 +4,7 @@ Personal Codex marketplace containing reusable GitHub planning and issue-refinem
 
 ## Included skills
 
-- `$pathfinder`: Turn an ambiguous initiative into dependency-aware, agent-ready GitHub issues.
+- `$pathfinder`: Use project docs, ADRs, and code to turn an ambiguous initiative into dependency-aware, agent-ready GitHub issues.
 - `$grill`: Check an issue against project docs and ADRs, then resolve missing decisions before implementation.
 
 ## Install
