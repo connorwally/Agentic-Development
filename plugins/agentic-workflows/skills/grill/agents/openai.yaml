@@ -1,7 +1,7 @@
 interface:
-  display_name: "Grill Me"
-  short_description: "Expose ticket ambiguity before implementation"
-  default_prompt: "Use $grill-me to question me about the ambiguities in this GitHub issue before implementation starts."
+  display_name: "Grill"
+  short_description: "Grill issues against project docs and ADRs"
+  default_prompt: "Use $grill to review this GitHub issue against the repository docs and ADRs, then question me about the remaining ambiguities."
 
 dependencies:
   tools:

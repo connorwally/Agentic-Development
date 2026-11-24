@@ -5,7 +5,7 @@ Personal Codex marketplace containing reusable GitHub planning and issue-refinem
 ## Included skills
 
 - `$pathfinder`: Turn an ambiguous initiative into dependency-aware, agent-ready GitHub issues.
-- `$grill-me`: Interrogate an issue for missing decisions before implementation begins.
+- `$grill`: Check an issue against project docs and ADRs, then resolve missing decisions before implementation.
 
 ## Install
 
@@ -20,7 +20,7 @@ Start a new Codex thread after installation, then invoke a skill explicitly:
 
 ```text
 $pathfinder
-$grill-me 123
+$grill 123
 ```
 
 Authenticate the GitHub connector separately on each device. Credentials are not bundled with the plugin.
